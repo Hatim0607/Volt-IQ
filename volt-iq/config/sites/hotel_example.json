@@ -1,0 +1,55 @@
+{
+  "site_id": "hotel_atlas_casa",
+  "name": "Hôtel Atlas — Casablanca",
+  "type": "hotel",
+  "timezone": "Africa/Casablanca",
+  "devices": [
+    {
+      "id": "pv_01",
+      "name": "Panneaux PV toiture",
+      "type": "solar_pv",
+      "protocol": "sunspec",
+      "host": "192.168.1.10",
+      "port": 502,
+      "capacity_kwp": 30
+    },
+    {
+      "id": "meter_main",
+      "name": "Compteur général",
+      "type": "energy_meter",
+      "protocol": "modbus_tcp",
+      "host": "192.168.1.11",
+      "port": 502,
+      "unit_id": 1
+    },
+    {
+      "id": "vfd_clim",
+      "name": "Variateur climatisation",
+      "type": "vfd",
+      "protocol": "modbus_tcp",
+      "host": "192.168.1.20",
+      "port": 502,
+      "unit_id": 2
+    },
+    {
+      "id": "clock_hall",
+      "name": "Horloge éclairage hall",
+      "type": "time_switch",
+      "protocol": "modbus_rtu",
+      "port": "/dev/ttyUSB0",
+      "baudrate": 9600,
+      "unit_id": 3
+    }
+  ],
+  "rules": {
+    "max_power_kw": 80,
+    "priority_loads": ["meter_main"],
+    "sheddable_loads": ["vfd_clim", "clock_hall"],
+    "self_consumption_target_pct": 80
+  },
+  "alerts": {
+    "overload_kw": 75,
+    "pv_drop_pct": 25,
+    "sensor_timeout_sec": 30
+  }
+}

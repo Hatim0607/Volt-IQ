@@ -1,0 +1,48 @@
+{
+  "site_id": "clinique_brahim_casa",
+  "name": "Clinique Al Brahim — Casablanca",
+  "type": "hospital",
+  "timezone": "Africa/Casablanca",
+  "devices": [
+    {
+      "id": "genset_01",
+      "name": "Groupe électrogène principal",
+      "type": "genset",
+      "protocol": "modbus_tcp",
+      "host": "192.168.2.10",
+      "port": 502,
+      "unit_id": 1,
+      "power_kva": 200
+    },
+    {
+      "id": "ups_bloc_op",
+      "name": "UPS bloc opératoire",
+      "type": "ups",
+      "protocol": "modbus_tcp",
+      "host": "192.168.2.11",
+      "port": 502,
+      "unit_id": 2,
+      "critical": true
+    },
+    {
+      "id": "pv_01",
+      "name": "Panneaux PV parking",
+      "type": "solar_pv",
+      "protocol": "sunspec",
+      "host": "192.168.2.12",
+      "port": 502,
+      "capacity_kwp": 50
+    }
+  ],
+  "rules": {
+    "max_power_kw": 150,
+    "never_shed": ["ups_bloc_op"],
+    "priority_loads": ["genset_01"],
+    "self_consumption_target_pct": 60
+  },
+  "alerts": {
+    "overload_kw": 140,
+    "ups_battery_pct_min": 20,
+    "sensor_timeout_sec": 10
+  }
+}

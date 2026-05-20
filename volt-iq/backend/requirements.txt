@@ -1,0 +1,15 @@
+# API
+fastapi>=0.110.0
+uvicorn>=0.27.0
+
+# Collecte capteurs
+pymodbus>=3.6.0
+paho-mqtt>=2.0.0
+
+# Base de données time-series
+influxdb-client>=1.40.0
+
+# Utilitaires
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+schedule>=1.2.0
