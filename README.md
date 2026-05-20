@@ -1,4 +1,5 @@
-# ⚡ Volt-IQ
+
+![Volt-IQ](logo.svg) # ⚡ Volt-IQ
 
 **Plateforme open source de gestion intelligente de l'énergie pour bâtiments**
 
