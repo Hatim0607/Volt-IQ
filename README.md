@@ -9,13 +9,13 @@ Volt-IQ permet de surveiller, analyser et optimiser la consommation électrique 
 
 ## Fonctionnalités
 
-- 📊 **Dashboard temps réel** — production PV, consommation, surplus réseau
-- 🏢 **Multi-sites** — gérez plusieurs bâtiments depuis une seule interface
-- 🔌 **Multi-protocoles** — Modbus RTU/TCP, MQTT, Sunspec, M-Bus
-- ⚙️ **Profils configurables** — chaque site déclaré via un fichier JSON
-- 🔔 **Alertes** — email/SMS en cas de dépassement ou de panne
-- 📈 **Historique** — courbes sur 24h, 7 jours, 1 mois
-- 🧠 **Moteur de règles EMS** — délestage, priorités, optimisation tarifaire
+- **Dashboard temps réel** — production PV, consommation, surplus réseau
+- **Multi-sites** — gérez plusieurs bâtiments depuis une seule interface
+- **Multi-protocoles** — Modbus RTU/TCP, MQTT, Sunspec, M-Bus
+- **Profils configurables** — chaque site déclaré via un fichier JSON
+- **Alertes** — email/SMS en cas de dépassement ou de panne
+- **Historique** — courbes sur 24h, 7 jours, 1 mois
+- **Moteur de règles EMS** — délestage, priorités, optimisation tarifaire
 
 ---
 
